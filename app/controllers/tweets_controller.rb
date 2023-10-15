@@ -4,9 +4,9 @@ class TweetsController < ApplicationController
 
   def index
     @tweets = Tweet.includes(:user).order("created_at DESC")
-    # query = "SELECT * FROM tweets"
-    # @tweets = Tweet.find_by_sql(query)
-    render json: @tweets
+    query = "SELECT * FROM tweets"
+    @tweets = Tweet.find_by_sql(query)
+    # render json: @tweets
   end
   def new
     @tweet = Tweet.new

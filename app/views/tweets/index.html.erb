@@ -4,5 +4,9 @@
 <% end %>
 <div class="contents row">
   <%= tweet_lists(@tweets) %>
+  <%#   <% @tweets.each do |tweet| %>
+    <%#<%= render partial: "tweet", locals: { tweet: tweet } %>
+  <%#<% end %> 
+  <%# ヘルパーメソッドで置き換え %>
 
 </div>
